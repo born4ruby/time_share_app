@@ -1,5 +1,38 @@
 <% if @invitation.reservation_completed? %>
-  Foo
+  <table class="table">
+    <thead>
+      <tr>
+        <td class="col-sm-3"></td>
+        <td class="col-sm-9"></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>First name</td>
+        <td><%= @invitation.reservation.first_name %></td>
+      </tr>
+      <tr>
+        <td>Last name</td>
+        <td><%= @invitation.reservation.last_name %></td>
+      </tr>
+      <tr>
+        <td>Phone number</td>
+        <td><%= @invitation.reservation.phone_number %></td>
+      </tr>
+      <tr>
+        <td>Preferred housing date</td>
+        <td><%= @invitation.reservation.preferred_housing_date %></td>
+      </tr>
+      <tr>
+        <td>Additional questions</td>
+        <td><%= @invitation.reservation.additional_questions %></td>
+      </tr>
+      <tr>
+        <td>Amenities</td>
+        <td><%= @invitation.reservation.amenities %></td>
+      </tr>
+    </tbody>
+  </table>
 <% else %>
   <h1>Make reservation</h1>
   <div>
