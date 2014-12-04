@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :invitations, only: [:new, :create], path: "request_reservation"
+  resources :reservations, only: [:new, :create]
 
   root 'pages#home'
 

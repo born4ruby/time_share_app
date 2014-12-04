@@ -8,4 +8,9 @@ class Invitation < ActiveRecord::Base
   def generate_invitation_token
   	self.invitation_token = UUID.new.generate
   end
+
+  def set_reservation_completed
+  	self.reservation_completed = true
+  	self.save!
+  end
 end
