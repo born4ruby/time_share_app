@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello, a time share has been scheduled.</h1>
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>First name</td>
+          <td><%= @reservation.first_name %></td>
+        </tr>
+        <tr>
+          <td>Last name</td>
+          <td><%= @reservation.last_name %></td>
+        </tr>
+        <tr>
+          <td>Phone number</td>
+          <td><%= @reservation.phone_number %></td>
+        </tr>
+        <tr>
+          <td>Preferred housing date</td>
+          <td><%= @reservation.preferred_housing_date %></td>
+        </tr>
+        <tr>
+          <td>Additional questions</td>
+          <td><%= @reservation.additional_questions %></td>
+        </tr>
+        <tr>
+          <td>Amenities</td>
+          <td><%= @reservation.amenities %></td>
+        </tr>
+        <tr>
+          <td>IP address</td>
+          <td><%= @reservation.ip_address %></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

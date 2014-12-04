@@ -21,6 +21,7 @@ class ReservationsController < ApplicationController
       	@reservation.set_ip_address(request)
         @reservation.save
         @invitation.set_reservation_completed
+        ReservationMailer.reservation_completion_email(@reservation).deliver
       else
         @reservation.next_step
       end
