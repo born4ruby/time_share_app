@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'pages/request_reservation'
+
+  resources :invitations, only: [:new, :create], path: "request_reservation"
+
+  root 'pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
