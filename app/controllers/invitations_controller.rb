@@ -10,6 +10,7 @@ class InvitationsController < ApplicationController
 
     respond_to do |format|
       if @invitation.save
+      	InvitationMailer.reservation_activation_email(@invitation).deliver
         format.html { redirect_to root_path, notice: "Thank you! We've emailed you an activation link. Follow the link to make reservation." }
       else
         format.html { render :new }
