@@ -5,9 +5,12 @@ class Reservation < ActiveRecord::Base
   # Associations
   belongs_to :invitation
 
+  AMENITIES = ['Heater', 'Dish Washer', 'Dryer', 'Fridge', 'Pool', 'Garage']
+  
   def steps
     %w[personal additional]
   end
+
 
   def current_step
     @current_step || steps.first

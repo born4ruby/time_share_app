@@ -40,7 +40,7 @@ class ReservationsController < ApplicationController
 
     def reservation_params
       params.require(:reservation).permit(:first_name, :last_name, :phone_number,
-      	                                  :preferred_housing_date, :additional_questions, :amenities)
+      	                                  :preferred_housing_date, :additional_questions, :amenities => [])
     end
 
     def set_invitation
